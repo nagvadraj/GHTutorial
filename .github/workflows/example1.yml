@@ -11,9 +11,11 @@ jobs:
             echo "hello world"
             ls -ltra
             cat README.md
-            
-        - name: Generate ASCII Artwork
-          run: cowsay -f dragon "Run for cover, I'm a DRAGON" >> dragon.txt
+
+        - name: Execute Shell Script
+          run: |
+            chomod +x ./ascii-script.sh
+            ./ascii-script.sh
 
 
 
