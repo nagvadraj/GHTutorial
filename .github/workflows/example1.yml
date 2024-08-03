@@ -6,10 +6,21 @@ jobs:
         steps: 
         - name: Checkout
           uses: actions/checkout@v4
-        - name: Welcome Message
-          run: echo "hello world"
-        - name: List Files
-          run: ls
-        - name: Read File
-          run: cat README.md
+        - name: Multiline commands
+          run: |
+            echo "hello world"
+            ls -ltra
+            cat README.md
+            
+        - name: Generate ASCII Artwork
+          run: cowsay -f dragon "Run for cover, I'm a DRAGON" >> dragon.txt
+
+
+
+        # - name: Welcome Message
+        #   run: echo "hello world"
+        # - name: List Files
+        #   run: ls
+        # - name: Read File
+        #   run: cat README.md
             
